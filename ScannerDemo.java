@@ -16,5 +16,6 @@ public class ScannerDemo {
 
     System.out.println(scanner.nextLine());
     System.out.println(scanner.nextInt());
+    scanner.close();
   }
 }
