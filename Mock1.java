@@ -7,12 +7,12 @@ class Employee {
   // ***** Define constructor(s) here
 
   // MY CODE STARTS
-  Employee(String name, String[] projects) {
+  public Employee(String name, String[] projects) {
     this.name = name;
     this.projects = projects;
   }
 
-  Employee(Employee employee) {
+  public Employee(Employee employee) {
     this.name = employee.name;
     this.projects = employee.projects.clone();
   }
