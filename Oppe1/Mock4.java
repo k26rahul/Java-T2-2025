@@ -1,3 +1,4 @@
+import java.security.KeyStore.Entry;
 import java.util.*;
 
 class Shop {
@@ -26,18 +27,21 @@ public class Mock4 {
     int sold = 0;
     // iterate through sList and add each shop object to map "m"
 
-    // my code starts
+    // MY CODE STARTS
     String bestShop = "";
+
     for (Shop shopObj : sList) {
       shop = shopObj.getName();
       sold = shopObj.getItemSold();
 
+      // store (shop : sold) in map
       if (m.containsKey(shop)) {
         m.put(shop, m.get(shop) + sold);
       } else {
         m.put(shop, sold);
       }
 
+      // either bestShop is empty, or shop has more sales than bestShop
       if (bestShop == "" || m.get(shop) > m.get(bestShop)) {
         bestShop = shop;
       }
@@ -45,7 +49,7 @@ public class Mock4 {
 
     shop = bestShop;
     sold = m.get(bestShop);
-    // my code ends
+    // MY CODE ENDS
 
     System.out.println(shop + " : " + sold);
   }

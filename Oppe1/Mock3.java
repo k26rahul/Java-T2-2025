@@ -3,10 +3,10 @@ import java.util.*;
 // Define interface Appraisable
 // Define interface SpecialAppraisable
 
-// my code starts
+// MY CODE STARTS
 interface Appraisable {
   public default void appraisal(Teacher teacher) {
-    double newSalary = teacher.getSalary() + (teacher.getstuPassPer() / 100 * 5000);
+    double newSalary = teacher.getSalary() + teacher.getstuPassPer() / 100 * 5000;
     teacher.setSalary(newSalary);
   }
 
@@ -16,11 +16,11 @@ interface Appraisable {
 
 interface SpecialAppraisable extends Appraisable {
   public default void spAppraisal(Teacher teacher) {
-    double newSalary = teacher.getSalary() + (teacher.getstuPassPer() / 100 * 10000);
+    double newSalary = teacher.getSalary() + teacher.getstuPassPer() / 100 * 10000;
     teacher.setSalary(newSalary);
   }
 }
-// my code ends
+// MY CODE ENDS
 
 
 class Teacher implements SpecialAppraisable {
@@ -62,14 +62,14 @@ class Teacher implements SpecialAppraisable {
 public class Mock3 {
   // Define method printUpdatedTeachList
 
-  // my code starts
+  // MY CODE STARTS
   public static void printUpdatedTeachList(Teacher[] teachers) {
     for (Teacher teacher : teachers) {
       teacher.checkAndUpdateSalary();
       System.out.println(teacher);
     }
   }
-  // my code ens
+  // MY CODE ENDS
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);

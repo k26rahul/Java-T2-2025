@@ -15,7 +15,7 @@ class Faculty {
   // Define method getDetails()
   // Override method getDetails(float percent)
 
-  // my code starts
+  // MY CODE STARTS
   public String getDetails() {
     return String.format("%s, %.1f", name, salary);
   }
@@ -24,6 +24,9 @@ class Faculty {
     return String.format("%s, %.1f, bonus = %.1f", name, salary, bonus(percent));
   }
 
+  // my note: They didn't told this in question, but we have to create methods
+  // getName and getSalary, because name and salary are private,
+  // and cannot be accessed in child (Hod) class.
   public String getName() {
     return name;
   }
@@ -31,7 +34,7 @@ class Faculty {
   public double getSalary() {
     return salary;
   }
-  // my code ends
+  // MY CODE ENDS
 }
 
 
@@ -46,7 +49,7 @@ class Hod extends Faculty {
   // Override method getDetails()
   // Override method getDetails(float percent)
 
-  // my code starts
+  // MY CODE STARTS
   public double bonus(float percent) {
     return super.bonus(percent) * 0.50;
   }
@@ -59,7 +62,7 @@ class Hod extends Faculty {
     return String.format("%s, %.1f, %s, %.1f", getName(), getSalary(), personalAssistant,
         bonus(percent));
   }
-  // my code ends
+  // MY CODE ENDS
 }
 
 

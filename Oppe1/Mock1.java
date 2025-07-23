@@ -6,7 +6,7 @@ class Employee {
 
   // ***** Define constructor(s) here
 
-  // my code starts
+  // MY CODE STARTS
   public Employee(String name, String[] projects) {
     this.name = name;
     this.projects = projects;
@@ -16,7 +16,7 @@ class Employee {
     this.name = employee.name;
     this.projects = employee.projects.clone();
   }
-  // my code ends
+  // MY CODE ENDS
 
   public void setName(String n) {
     name = n;
